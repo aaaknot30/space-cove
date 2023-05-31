@@ -81,7 +81,7 @@ export default async function Asteroids() {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
         <div>
           <h2>Space Cove - Asteroids</h2>
-          <p><strong>Date: {asteroids.length} asteroids observed. </strong> </p>
+          <p><strong>Date: </strong> {endDate} <strong>{asteroids.length}</strong>  asteroids observed. </p>
           <h3>Asteroids</h3>
         </div>
        
