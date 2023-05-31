@@ -1,4 +1,3 @@
-'use client'
 import './globals.css'
 import styles from './styles.module.css';
 import { Inter } from 'next/font/google';
@@ -19,13 +18,13 @@ function Nav() {
   const pathname = usePathname();
   return (
     <nav className={styles.nav}>
-      <Link className={pathname === '/' ? styles.linkActive : styles.link} href="/">Home</Link>
-      <Link className={pathname === '/apod' ? styles.linkActive : styles.link} href="/apod">Daily Pic</Link>
-      <Link className={pathname === '/rover' ? styles.linkActive : styles.link} href="/rover">Rover</Link>
-      <Link className={pathname === '/search' ? styles.linkActive : styles.link} href="/search">Media Search</Link>
-      <Link className={pathname === '/asteroids' ? styles.linkActive : styles.link} href="/asteroids">Daily Asteroids</Link>
-      <Link className={pathname === '/patent' ? styles.linkActive : styles.link} href="/patent">Patents Search</Link>
-      <Link className={pathname === '/projects' ? styles.linkActive : styles.link} href="/projects">Projects Search</Link>
+      <Link className={styles.link} href="/">Home</Link>
+      <Link className={styles.link} href="/apod">Daily Pic</Link>
+      <Link className={styles.link} href="/rover">Rover</Link>
+      <Link className={styles.link} href="/search">Media Search</Link>
+      <Link className={styles.link} href="/asteroids">Daily Asteroids</Link>
+      <Link className={styles.link} href="/patent">Patents Search</Link>
+      <Link className={styles.link} href="/projects">Projects Search</Link>
     </nav>
   )
 }
