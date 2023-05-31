@@ -40,11 +40,7 @@ async function getData() {
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   const url = `https://api.nasa.gov/techtransfer/patent/?${search}&api_key=${key}`
   console.log(url)
-  const res = await fetch(url, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  const res = await fetch(url);
   return res.json();;
 }
 
