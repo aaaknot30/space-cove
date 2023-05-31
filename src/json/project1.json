@@ -1,0 +1,258 @@
+{
+  "project": {
+      "acronym": "TEMP",
+      "projectId": 94064,
+      "title": "Temperature Fiber Optic Sensing System",
+      "primaryTaxonomyNodes": [
+          {
+              "taxonomyNodeId": 10756,
+              "taxonomyRootId": 8816,
+              "parentNodeId": 10751,
+              "level": 3,
+              "code": "TX08.3.5",
+              "title": "Electromagnetic Wave Based Sensors",
+              "definition": "Electromagnetic wave based sensors are sensor systems utilizing Ultra Violet, millimeter wave, and fiber-optic based detectors for discrete measurements, and for system monitoring and control.",
+              "exampleTechnologies": "Strain, temperature, pressure, structure/materials, etc. measurements",
+              "hasChildren": false,
+              "hasInteriorContent": true
+          }
+      ],
+      "startTrl": 2,
+      "currentTrl": 6,
+      "endTrl": 6,
+      "benefits": "Oil and Gas industry as well as Spacex would be primary beneficiaries of this technology. ",
+      "description": "We're going to bake the fiber to take out all the moisture, then vacuum all the air out, fill it with a different gas (Helium) and seal the endings. This will guarantee that our measurements are highly accurate and unaffected by humidity. We will perform several environmental tests such as local humidity chamber, actual humid environments, 24 hours water submerging, 24 hours liquid nitrogen submerging, etc.",
+      "destinations": [
+          {
+              "lkuCodeId": 1543,
+              "code": "EARTH",
+              "description": "Earth",
+              "lkuCodeTypeId": 526,
+              "lkuCodeType": {
+                  "codeType": "DESTINATION_TYPE",
+                  "description": "Destination Type"
+              }
+          }
+      ],
+      "startYear": 2017,
+      "startMonth": 10,
+      "endYear": 2018,
+      "endMonth": 9,
+      "statusDescription": "Completed",
+      "principalInvestigators": [
+          {
+              "contactId": 14151,
+              "canUserEdit": false,
+              "firstName": "Allen",
+              "lastName": "Parker",
+              "fullName": "Allen R Parker",
+              "fullNameInverted": "Parker, Allen R",
+              "middleInitial": "R",
+              "primaryEmail": "allen.r.parker@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          },
+          {
+              "contactId": 436306,
+              "canUserEdit": false,
+              "firstName": "Shideh",
+              "lastName": "Naderi",
+              "fullName": "Shideh Naderi",
+              "fullNameInverted": "Naderi, Shideh",
+              "primaryEmail": "shideh.naderi@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programDirectors": [
+          {
+              "contactId": 335305,
+              "canUserEdit": false,
+              "firstName": "Michael",
+              "lastName": "Lapointe",
+              "fullName": "Michael R Lapointe",
+              "fullNameInverted": "Lapointe, Michael R",
+              "middleInitial": "R",
+              "primaryEmail": "michael.r.lapointe@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programExecutives": [
+          {
+              "contactId": 392233,
+              "canUserEdit": false,
+              "firstName": "Richard",
+              "lastName": "Howard",
+              "fullName": "Richard W Howard",
+              "fullNameInverted": "Howard, Richard W",
+              "middleInitial": "W",
+              "primaryEmail": "richard.w.howard@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programManagers": [
+          {
+              "contactId": 112848,
+              "canUserEdit": false,
+              "firstName": "David",
+              "lastName": "Voracek",
+              "fullName": "David F Voracek",
+              "fullNameInverted": "Voracek, David F",
+              "middleInitial": "F",
+              "primaryEmail": "david.f.voracek@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "website": "https://www.nasa.gov/directorates/spacetech/innovation_fund/index.html#.VQb6gUjJzyE",
+      "libraryItems": [],
+      "transitions": [
+          {
+              "transitionId": 54337,
+              "projectId": 94064,
+              "transitionDate": "2018-09-01",
+              "path": "Closed Out",
+              "infoText": "Closed out",
+              "infoTextExtra": "",
+              "dateText": "September 2018"
+          }
+      ],
+      "responsibleMd": {
+          "acronym": "STMD",
+          "canUserEdit": false,
+          "city": "",
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4875,
+          "organizationName": "Space Technology Mission Directorate",
+          "organizationType": "NASA_Mission_Directorate",
+          "naorganization": false,
+          "organizationTypePretty": "NASA Mission Directorate"
+      },
+      "program": {
+          "acronym": "AFRC CIF",
+          "active": true,
+          "description": "<p>The Armstrong Flight Research Center is NASA&rsquo;s primary center for atmospheric flight research and operations,&nbsp;with a vision &ldquo;to fly what others only imagine.&rdquo; We believe that flight validation and research is one of&nbsp;the crucial phases within the advancement of any NASA technology, and it is often the barrier to technology&nbsp;utilization by the private sector. We also believe that aerospace technology can be enhanced through flight&nbsp;early in the Technology Readiness Level (TRL) lifecycle. In fact, some research can be done only in flight. The&nbsp;CIF projects are examples of aerospace technologies that are theoretically advantageous but have had&nbsp;little TRL advancement or are at too early of a technology level for support through a NASA mission.</p><p>The focus for the program is on validating, developing, and testing new and innovative technologies.</p><p>The current&nbsp;technology areas for the projects included:<br />AFRC is currently looking into following Technical Capability areas (not in any priority order and not all inclusive):<br />1.&nbsp;&nbsp; &nbsp;Small launch Space Systems<br />Develop small launch space systems such as horizontal rockets that could launch to orbit small free-flying space platforms (e.g., cuestas, nanosats, picosats).<br />2.&nbsp;&nbsp; &nbsp;Altitude Compensating Rocket Systems<br />Design, build, and test altitude compensating rocket systems or sub-systems designed to operate the rocket efficiently across a wide range of altitudes. &nbsp;Subsystems such as Altitude Compensating Nozzles are being considered.<br />3.&nbsp;&nbsp; &nbsp;Aero Gravity Assist Systems<br />Design, build, and test an Aerogravity assist system which uses a close approach to the planet, dipping into the atmosphere, so the spacecraft can also use aerodynamic lift to further curve the trajectory.<br />4.&nbsp;&nbsp; &nbsp;Launch Vehicle and Spacecraft Adaptive Controls<br />Develop and test adaptive controls architectures speciﬁcally tailored for application to launch vehicles. &nbsp;Adaptive Controls for launch vehicles would include unique features of the &nbsp;aerospace vehicle, such as control-structure interaction, propellant slosh, sensor performance, and actuator dynamics. &nbsp;In addition, the analysis, veriﬁcation, and ﬂight certiﬁcation framework for the control system must be addressed.<br />5.&nbsp;&nbsp; &nbsp;Autonomous Systems<br />AFRC is exploring concepts for advanced autonomous systems and collaborative autonomous operations that could be applied across aerospace vehicles to enhance effectiveness, survivability, and affordability.<br />6.&nbsp;&nbsp; &nbsp;Autonomy in a Safety Critical Framework<br />Armstrong Flight Research Center is interested in the flight demonstration of high level autonomy in a safety critical framework with applicability to man-rated air and space vehicles. &nbsp;This high level of autonomy is enabled through the use of multiple sensor platforms and algorithms with high computational demands. &nbsp;Increased computational capability through embedded high performance computing and implementation of resource efficient algorithms is needed to support this integration. &nbsp;Research into embedded high performance computing using multi-core processors, FPGA, GPU, DSP and associated development of toolchains and algorithms targeted to these platforms is needed in order to reduce the Size, Weight, and Power (SWaP) of the flight vehicles..<br />7.&nbsp;&nbsp; &nbsp;Space Weather Systems<br />Design, develop, and test measurement systems to provide the capability for on-demand, validated, and archived radiation measurements related to human tissue and avionics silicon upset concerns.<br />8.&nbsp;&nbsp; &nbsp;Electromagnetically Boosted Rockets<br />One possible solution is to use an electromagnetic linear motor boost system to supplement the use of first stage booster rockets and rocket clusters. China Lake is currently advocating to NAVAIR to initiate a study of long term capital costs and recurring system operational costs of the use of an electromagnetic linear motor booster system for their rocket sled tracks as compared to the long term operational system costs of moving to a newer line of booster rocket production.</p><p>&nbsp;</p>",
+          "parentProgram": {
+              "acronym": "CIF",
+              "active": true,
+              "description": "<p>Through the Center Innovation Fund, the Space Technology Mission Directorate allocates a small portion of the NASA workforce and procurement budget to internal research and development to feed early stage innovation in technology and exploration.&nbsp;Activities with in the Center Innovation Fund are proposed and led by NASA scientists and engineers. &nbsp;These activities and creative initiatives pursue emerging technologies that leverage talent and capabilities at the NASA Centers.</p><p>&nbsp;</p><p>&nbsp;</p>",
+              "programId": 64,
+              "responsibleMd": {
+                  "acronym": "STMD",
+                  "canUserEdit": false,
+                  "city": "",
+                  "external": false,
+                  "linkCount": 0,
+                  "organizationId": 4875,
+                  "organizationName": "Space Technology Mission Directorate",
+                  "organizationType": "NASA_Mission_Directorate",
+                  "naorganization": false,
+                  "organizationTypePretty": "NASA Mission Directorate"
+              },
+              "responsibleMdId": 4875,
+              "stockImageFileId": 36643,
+              "title": "Center Innovation Fund"
+          },
+          "parentProgramId": 64,
+          "programId": 161,
+          "responsibleMd": {
+              "acronym": "STMD",
+              "canUserEdit": false,
+              "city": "",
+              "external": false,
+              "linkCount": 0,
+              "organizationId": 4875,
+              "organizationName": "Space Technology Mission Directorate",
+              "organizationType": "NASA_Mission_Directorate",
+              "naorganization": false,
+              "organizationTypePretty": "NASA Mission Directorate"
+          },
+          "responsibleMdId": 4875,
+          "stockImageFileId": 36647,
+          "title": "Center Innovation Fund: AFRC CIF"
+      },
+      "leadOrganization": {
+          "acronym": "AFRC",
+          "canUserEdit": false,
+          "city": "Edwards",
+          "country": {
+              "abbreviation": "US",
+              "countryId": 236,
+              "name": "United States"
+          },
+          "countryId": 236,
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4893,
+          "organizationName": "Armstrong Flight Research Center",
+          "organizationType": "NASA_Center",
+          "stateTerritory": {
+              "abbreviation": "CA",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "California",
+              "stateTerritoryId": 59
+          },
+          "stateTerritoryId": 59,
+          "naorganization": false,
+          "organizationTypePretty": "NASA Center"
+      },
+      "supportingOrganizations": [
+          {
+              "acronym": "MSFC",
+              "canUserEdit": false,
+              "city": "Huntsville",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "external": false,
+              "linkCount": 0,
+              "organizationId": 4854,
+              "organizationName": "Marshall Space Flight Center",
+              "organizationType": "NASA_Center",
+              "stateTerritory": {
+                  "abbreviation": "AL",
+                  "country": {
+                      "abbreviation": "US",
+                      "countryId": 236,
+                      "name": "United States"
+                  },
+                  "countryId": 236,
+                  "name": "Alabama",
+                  "stateTerritoryId": 18
+              },
+              "stateTerritoryId": 18,
+              "naorganization": false,
+              "organizationTypePretty": "NASA Center"
+          }
+      ],
+      "statesWithWork": [
+          {
+              "abbreviation": "CA",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "California",
+              "stateTerritoryId": 59
+          }
+      ],
+      "lastUpdated": "2023-5-25",
+      "releaseStatusString": "Released",
+      "viewCount": 629,
+      "endDateString": "Sep 2018",
+      "startDateString": "Oct 2017"
+  }
+}

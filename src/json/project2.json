@@ -1,0 +1,189 @@
+{
+  "project": {
+      "acronym": "",
+      "projectId": 10519,
+      "title": "Micro Thruster Development with Green Propellant at mN and microN levels",
+      "startTrl": 1,
+      "currentTrl": 3,
+      "endTrl": 3,
+      "benefits": "The development of these micro-thrusters would serve as a technology demonstration for a volumetrically efficient 3-axis stabilization and primary propulsion scheme for micro-satellite missions, providing the required high pointing accuracy and full range of attitude adjustment characteristic of larger satellites.",
+      "description": "The objective is to develop a high-efficiency micro-thruster using green propellant with electrospray injector that will ultimately provide micro-satellites with the performance required to enable the replacement of large, expensive, multi-role satellites with inexpensive, short-lead time, distributed systems of micro-satellites. The objectives of the project is the development of single emitter and multiple emitter injectors for doped kerosene; to develop a fundamental understanding of droplet transport, evaporation, and mixing in the complex swirling flow fields required for meso-scale flame stabilization; and the system integration of meso-scale thrust chamber with electrospray fuel injection system. A single emitter electrospray configuration will be developed and the performance benchmarked using Phase Doppler Particle Analysis to determine the droplet size distribution as a function of flow rate. The nature of droplet transport and evaporation at the meso-scale will be studied using non-intrusive laser based techniques. The electrospray injector will be integrated into the existing heat regenerating thrust chamber and fired with kerosene/H2O2.",
+      "startYear": 2011,
+      "startMonth": 10,
+      "endYear": 2012,
+      "endMonth": 9,
+      "statusDescription": "Completed",
+      "principalInvestigators": [
+          {
+              "contactId": 98671,
+              "canUserEdit": false,
+              "firstName": "Daniel",
+              "lastName": "Ramspacher",
+              "fullName": "Daniel J Ramspacher",
+              "fullNameInverted": "Ramspacher, Daniel J",
+              "middleInitial": "J",
+              "primaryEmail": "daniel.j.ramspacher@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programDirectors": [
+          {
+              "contactId": 335305,
+              "canUserEdit": false,
+              "firstName": "Michael",
+              "lastName": "Lapointe",
+              "fullName": "Michael R Lapointe",
+              "fullNameInverted": "Lapointe, Michael R",
+              "middleInitial": "R",
+              "primaryEmail": "michael.r.lapointe@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programExecutives": [
+          {
+              "contactId": 392233,
+              "canUserEdit": false,
+              "firstName": "Richard",
+              "lastName": "Howard",
+              "fullName": "Richard W Howard",
+              "fullNameInverted": "Howard, Richard W",
+              "middleInitial": "W",
+              "primaryEmail": "richard.w.howard@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programManagers": [
+          {
+              "contactId": 373483,
+              "canUserEdit": false,
+              "firstName": "Peter",
+              "lastName": "Hughes",
+              "fullName": "Peter M Hughes",
+              "fullNameInverted": "Hughes, Peter M",
+              "middleInitial": "M",
+              "primaryEmail": "peter.m.hughes@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "website": "http://aetd.gsfc.nasa.gov/",
+      "libraryItems": [],
+      "transitions": [
+          {
+              "transitionId": 54308,
+              "projectId": 10519,
+              "transitionDate": "2012-09-01",
+              "path": "Closed Out",
+              "infoText": "Closed out",
+              "infoTextExtra": "",
+              "dateText": "September 2012"
+          }
+      ],
+      "responsibleMd": {
+          "acronym": "STMD",
+          "canUserEdit": false,
+          "city": "",
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4875,
+          "organizationName": "Space Technology Mission Directorate",
+          "organizationType": "NASA_Mission_Directorate",
+          "naorganization": false,
+          "organizationTypePretty": "NASA Mission Directorate"
+      },
+      "program": {
+          "acronym": "GSFC CIF",
+          "active": true,
+          "description": "Through the Center Innovation Fund, the Space Technology Mission Directorate allocates a small portion of the NASA workforce and procurement budget to internal research and development to feed early stage innovation in technology and exploration. Activities with in the Center Innovation Fund are proposed and led by NASA scientists and engineers.  These activities and creative initiatives pursue emerging technologies that leverage talent and capabilities at the NASA Centers.    ",
+          "parentProgram": {
+              "acronym": "CIF",
+              "active": true,
+              "description": "<p>Through the Center Innovation Fund, the Space Technology Mission Directorate allocates a small portion of the NASA workforce and procurement budget to internal research and development to feed early stage innovation in technology and exploration.&nbsp;Activities with in the Center Innovation Fund are proposed and led by NASA scientists and engineers. &nbsp;These activities and creative initiatives pursue emerging technologies that leverage talent and capabilities at the NASA Centers.</p><p>&nbsp;</p><p>&nbsp;</p>",
+              "programId": 64,
+              "responsibleMd": {
+                  "acronym": "STMD",
+                  "canUserEdit": false,
+                  "city": "",
+                  "external": false,
+                  "linkCount": 0,
+                  "organizationId": 4875,
+                  "organizationName": "Space Technology Mission Directorate",
+                  "organizationType": "NASA_Mission_Directorate",
+                  "naorganization": false,
+                  "organizationTypePretty": "NASA Mission Directorate"
+              },
+              "responsibleMdId": 4875,
+              "stockImageFileId": 36643,
+              "title": "Center Innovation Fund"
+          },
+          "parentProgramId": 64,
+          "programId": 163,
+          "responsibleMd": {
+              "acronym": "STMD",
+              "canUserEdit": false,
+              "city": "",
+              "external": false,
+              "linkCount": 0,
+              "organizationId": 4875,
+              "organizationName": "Space Technology Mission Directorate",
+              "organizationType": "NASA_Mission_Directorate",
+              "naorganization": false,
+              "organizationTypePretty": "NASA Mission Directorate"
+          },
+          "responsibleMdId": 4875,
+          "stockImageFileId": 36650,
+          "title": "Center Innovation Fund: GSFC CIF"
+      },
+      "leadOrganization": {
+          "acronym": "GSFC",
+          "canUserEdit": false,
+          "city": "Greenbelt",
+          "country": {
+              "abbreviation": "US",
+              "countryId": 236,
+              "name": "United States"
+          },
+          "countryId": 236,
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4947,
+          "organizationName": "Goddard Space Flight Center",
+          "organizationType": "NASA_Center",
+          "stateTerritory": {
+              "abbreviation": "MD",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "Maryland",
+              "stateTerritoryId": 3
+          },
+          "stateTerritoryId": 3,
+          "naorganization": false,
+          "organizationTypePretty": "NASA Center"
+      },
+      "statesWithWork": [
+          {
+              "abbreviation": "MD",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "Maryland",
+              "stateTerritoryId": 3
+          }
+      ],
+      "lastUpdated": "2023-5-25",
+      "releaseStatusString": "Released",
+      "viewCount": 466,
+      "endDateString": "Sep 2012",
+      "startDateString": "Oct 2011"
+  }
+}

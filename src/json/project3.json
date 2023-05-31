@@ -1,0 +1,251 @@
+{
+  "project": {
+      "acronym": "",
+      "projectId": 10514,
+      "title": "Doppler Lidar for Measurement of High-Altitude Aircraft Wake Vortices, Year 1",
+      "startTrl": 2,
+      "currentTrl": 3,
+      "endTrl": 3,
+      "benefits": "The lidar's wake measurement capability provides a tool for quantifying wake hazards in NASA's Airspace Systems Program.",
+      "description": "We are developing a Doppler lidar technology for detecting and measuring wake vortices of aircraft. This lidar has been largely developed for meteorological applications, and we are exploring its adaptation to use in this aeronautics application. Wake vortex considerations are important in preventing harmful turbulence encounters in our nation's airspace. While ground-based Doppler lidar has been used to probe wakes of landing aircraft for many years, these lidars are of a low pulse energy (a few millijoules) that limits their use to short ranges and low altitudes within the atmospheric boundary layer. With NASA's advancement of high pulse energy (250-millijoules) lidar, aircraft wakes could now be measured at long ranges and high altitudes. A ground-based lidar could be used to measure wakes of overflying aircraft to altitudes as high at 20,000 feet. Furthermore, the high-energy lidar could be installed in an aircraft to measure the wakes of other aircraft in flight. The Airspace Systems Program (ASP) is committed to the development of Super Density Operations (SDO) concepts for NextGen. Wake vortices are a fundamental physical limitation that will need to be resolved to enable these SDOs. Understanding wake vortices is a crucial step in the path to NextGen. Under ASP, NASA's wake vortex prediction model development is world-class and is actively involved in both development and validation of these wake models. Access to previously unavailable enroute wake data that would result from this effort represents a huge opportunity to help enable the NextGen goals by providing the ability to conduct robust model validation critical to enabling SDO concepts. To start the development of measuring aircraft wakes from a distant location, we are having an aircraft fly over the lidar in such a way that the aircraft's wakes will drift over the lidar's beam. By placing the target wakes at a known location, we will capture the signal's indicative of a wake vortex. An automated algorithm could then be developed to automatically scan for and lock onto a wake vortex signature. We are also making preliminary designs of adapting the lidar's operation in an aircraft for currently-used meteorological wind measurements to wake vortex measurements. These changes are in the scan pattern of the lidar beam and signal processing.",
+      "startYear": 2012,
+      "startMonth": 1,
+      "endYear": 2012,
+      "endMonth": 9,
+      "statusDescription": "Completed",
+      "principalInvestigators": [
+          {
+              "contactId": 169003,
+              "canUserEdit": false,
+              "firstName": "Grady",
+              "lastName": "Koch",
+              "fullName": "Grady J Koch",
+              "fullNameInverted": "Koch, Grady J",
+              "middleInitial": "J",
+              "primaryEmail": "grady.j.koch@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programDirectors": [
+          {
+              "contactId": 335305,
+              "canUserEdit": false,
+              "firstName": "Michael",
+              "lastName": "Lapointe",
+              "fullName": "Michael R Lapointe",
+              "fullNameInverted": "Lapointe, Michael R",
+              "middleInitial": "R",
+              "primaryEmail": "michael.r.lapointe@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programExecutives": [
+          {
+              "contactId": 392233,
+              "canUserEdit": false,
+              "firstName": "Richard",
+              "lastName": "Howard",
+              "fullName": "Richard W Howard",
+              "fullNameInverted": "Howard, Richard W",
+              "middleInitial": "W",
+              "primaryEmail": "richard.w.howard@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "programManagers": [
+          {
+              "contactId": 506560,
+              "canUserEdit": false,
+              "firstName": "Julie",
+              "lastName": "Williams-byrd",
+              "fullName": "Julie A Williams-byrd",
+              "fullNameInverted": "Williams-byrd, Julie A",
+              "middleInitial": "A",
+              "primaryEmail": "julie.a.williams-byrd@nasa.gov",
+              "publicEmail": true,
+              "nacontact": false
+          }
+      ],
+      "website": "",
+      "libraryItems": [
+          {
+              "caption": "Project Image   Doppler Lidar for Measurement of High-Altitude Aircraft Wake Vortices",
+              "file": {
+                  "fileExtension": "jpg",
+                  "fileId": 266970,
+                  "fileName": "37",
+                  "fileSize": 25906,
+                  "objectId": 266728,
+                  "objectType": {
+                      "lkuCodeId": 889,
+                      "code": "LIBRARY_ITEMS",
+                      "description": "Library Items",
+                      "lkuCodeTypeId": 182,
+                      "lkuCodeType": {
+                          "codeType": "OBJECT_TYPE",
+                          "description": "Object Type"
+                      }
+                  },
+                  "objectTypeId": 889,
+                  "fileSizeString": "25.3 KB"
+              },
+              "files": [
+                  {
+                      "fileExtension": "jpg",
+                      "fileId": 266970,
+                      "fileName": "37",
+                      "fileSize": 25906,
+                      "objectId": 266728,
+                      "objectType": {
+                          "lkuCodeId": 889,
+                          "code": "LIBRARY_ITEMS",
+                          "description": "Library Items",
+                          "lkuCodeTypeId": 182,
+                          "lkuCodeType": {
+                              "codeType": "OBJECT_TYPE",
+                              "description": "Object Type"
+                          }
+                      },
+                      "objectTypeId": 889,
+                      "fileSizeString": "25.3 KB"
+                  }
+              ],
+              "id": 266728,
+              "title": "37.jpg",
+              "description": "Project Image   Doppler Lidar for Measurement of High-Altitude Aircraft Wake Vortices",
+              "libraryItemTypeId": 1095,
+              "projectId": 10514,
+              "primary": true,
+              "publishedDateString": "",
+              "contentType": {
+                  "lkuCodeId": 1095,
+                  "code": "IMAGE",
+                  "description": "Image",
+                  "lkuCodeTypeId": 341,
+                  "lkuCodeType": {
+                      "codeType": "LIBRARY_ITEM_TYPE",
+                      "description": "Library Item Type"
+                  }
+              }
+          }
+      ],
+      "transitions": [],
+      "primaryImage": {
+          "file": {
+              "fileExtension": "jpg",
+              "fileId": 266970,
+              "fileSizeString": "0 Byte"
+          },
+          "id": 266728,
+          "description": "Project Image   Doppler Lidar for Measurement of High-Altitude Aircraft Wake Vortices",
+          "projectId": 10514,
+          "publishedDateString": ""
+      },
+      "responsibleMd": {
+          "acronym": "STMD",
+          "canUserEdit": false,
+          "city": "",
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4875,
+          "organizationName": "Space Technology Mission Directorate",
+          "organizationType": "NASA_Mission_Directorate",
+          "naorganization": false,
+          "organizationTypePretty": "NASA Mission Directorate"
+      },
+      "program": {
+          "acronym": "LaRC CIF",
+          "active": true,
+          "description": "<p>Through the Center Innovation Fund, the Space Technology Mission Directorate (STMD)&nbsp;allocates a small portion of the NASA workforce and procurement budget to internal research and development to feed early stage innovation in technology and exploration. Activities within the Center Innovation Fund are proposed and led by NASA scientists and engineers. These activities and creative initiatives pursue emerging technologies that leverage talent and capabilities at NASA Langley Research Center.</p><p>Through the Independent Research and Developments activity, NASA Langley Research Center allocates funds to invest in early stage, high-payoff technologies and systems that are aligned with the NASA and Langley strategic plans and have high potential for future applications.</p><p>Some projects will align only with either CIF or IRAD support, but many are supported by a combination of both programs to leverage the most from limited resources. The investment in these early stage technologies is intended to mature them to the point that, if successful, they can substantially influence future Mission Directorate programs and projects, and receive follow-on support from NASA programs, external partners, or through commercialization.</p>",
+          "parentProgram": {
+              "acronym": "CIF",
+              "active": true,
+              "description": "<p>Through the Center Innovation Fund, the Space Technology Mission Directorate allocates a small portion of the NASA workforce and procurement budget to internal research and development to feed early stage innovation in technology and exploration.&nbsp;Activities with in the Center Innovation Fund are proposed and led by NASA scientists and engineers. &nbsp;These activities and creative initiatives pursue emerging technologies that leverage talent and capabilities at the NASA Centers.</p><p>&nbsp;</p><p>&nbsp;</p>",
+              "programId": 64,
+              "responsibleMd": {
+                  "acronym": "STMD",
+                  "canUserEdit": false,
+                  "city": "",
+                  "external": false,
+                  "linkCount": 0,
+                  "organizationId": 4875,
+                  "organizationName": "Space Technology Mission Directorate",
+                  "organizationType": "NASA_Mission_Directorate",
+                  "naorganization": false,
+                  "organizationTypePretty": "NASA Mission Directorate"
+              },
+              "responsibleMdId": 4875,
+              "stockImageFileId": 36643,
+              "title": "Center Innovation Fund"
+          },
+          "parentProgramId": 64,
+          "programId": 167,
+          "responsibleMd": {
+              "acronym": "STMD",
+              "canUserEdit": false,
+              "city": "",
+              "external": false,
+              "linkCount": 0,
+              "organizationId": 4875,
+              "organizationName": "Space Technology Mission Directorate",
+              "organizationType": "NASA_Mission_Directorate",
+              "naorganization": false,
+              "organizationTypePretty": "NASA Mission Directorate"
+          },
+          "responsibleMdId": 4875,
+          "stockImageFileId": 36655,
+          "title": "Center Innovation Fund: LaRC CIF"
+      },
+      "leadOrganization": {
+          "acronym": "LaRC",
+          "canUserEdit": false,
+          "city": "Hampton",
+          "country": {
+              "abbreviation": "US",
+              "countryId": 236,
+              "name": "United States"
+          },
+          "countryId": 236,
+          "external": false,
+          "linkCount": 0,
+          "organizationId": 4852,
+          "organizationName": "Langley Research Center",
+          "organizationType": "NASA_Center",
+          "stateTerritory": {
+              "abbreviation": "VA",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "Virginia",
+              "stateTerritoryId": 7
+          },
+          "stateTerritoryId": 7,
+          "naorganization": false,
+          "organizationTypePretty": "NASA Center"
+      },
+      "statesWithWork": [
+          {
+              "abbreviation": "VA",
+              "country": {
+                  "abbreviation": "US",
+                  "countryId": 236,
+                  "name": "United States"
+              },
+              "countryId": 236,
+              "name": "Virginia",
+              "stateTerritoryId": 7
+          }
+      ],
+      "lastUpdated": "2023-5-25",
+      "releaseStatusString": "Released",
+      "viewCount": 401,
+      "endDateString": "Sep 2012",
+      "startDateString": "Jan 2012"
+  }
+}

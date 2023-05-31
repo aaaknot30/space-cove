@@ -1,95 +1,81 @@
+import './globals.css'
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from './page.module.css'
+import Script from 'next/script';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCamera, faTruckPickup, faVideo, faMeteor, faLightbulb, faWrench } from '@fortawesome/free-solid-svg-icons'
+
+
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <section className={styles.section1}>
+        <h1 className="title1">Space Cove</h1>
+      </section>
+      <section className={styles.section2}>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      </section>
+      <section className={styles.section3}>
+          <h1 className="title2">Explore. Discover. Learn.</h1>
+        
+          
+          <Link href="/apod">
+            <div className="card">
+              <h2><strong>Pic of the Day</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faCamera} size = {'xl'} />
+            </div>
+          </Link> 
+          <Link href="/rover">
+            <div className="card">
+              <h2><strong>Rover Photos</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faTruckPickup} size = {'xl'} />
+            </div> 
+          </Link>
+          <Link href="/search">
+            <div className="card">
+              <h2><strong>Media Search</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faVideo} size = {'xl'} />
+            </div> 
+          </Link>
+
+
+          <Link href="/asteroids">  
+            <div className="card">
+              <h2><strong>Daily Asteroids</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faMeteor} size = {'xl'} />
+            </div> 
+          </Link>
+          <Link href="/patent">
+            <div className="card">
+              <h2><strong>Patents</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faLightbulb} size = {'xl'} />
+            </div> 
+          </Link>
+          <Link href="/projects">
+            <div className="card">
+              <h2><strong>Projects</strong></h2>
+              <FontAwesomeIcon className="icon" icon={faWrench} size = {'xl'} />
+            </div> 
+          </Link>
+
+
+      </section>
+      <section className={styles.section4}>
+      <Image
+        src={'/img/nasa_logo.jpg'}
+        width={85}
+        height={70}
+        alt="NASA Logo"
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <h2>NASA Open API</h2>
+        <p>Space Coce uses the NASA Open API for much of its content. <br /> Space Cove organizes and provides access to vast amounts of data. <br /> The objective of this NASA Open API is to make NASA data and imagery accessible to developers.</p>
+      </section>
+      <section className={styles.section5}>
+        <p>By Kyle Larson</p>
+      </section>
+     
     </main>
   )
 }
