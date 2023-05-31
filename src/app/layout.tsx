@@ -3,7 +3,6 @@ import styles from './styles.module.css';
 import { Inter } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
  
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +14,6 @@ export const metadata = {
 
 
 function Nav() {
-  const pathname = usePathname();
   return (
     <nav className={styles.nav}>
       <Link className={styles.link} href="/">Home</Link>
