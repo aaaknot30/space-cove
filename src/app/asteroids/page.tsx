@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import Script from 'next/script';
 import '../globals.css'
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Metadata } from 'next';
 import asteroids from '../../json/asteroids2'
 import MyChart from '../../components/MyChart'

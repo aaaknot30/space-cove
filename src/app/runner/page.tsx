@@ -3,7 +3,7 @@ import styles from '../page.module.css'
 import Counter from '../../components/counter';
 import Monitor from '../../components/Monitor';
 import '../globals.css'
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {

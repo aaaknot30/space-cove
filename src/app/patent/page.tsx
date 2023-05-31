@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 import '../globals.css'
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import { revalidatePath } from "next/cache";
