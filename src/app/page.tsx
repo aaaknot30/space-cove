@@ -70,7 +70,7 @@ export default function Home() {
         alt="NASA Logo"
         />
         <h2>NASA Open API</h2>
-        <p>Space Coce uses the NASA Open API for much of its content. <br /> Space Cove organizes and provides access to vast amounts of data. <br /> The objective of this NASA Open API is to make NASA data and imagery accessible to developers.</p>
+        <p>Space Cove uses the NASA Open API for much of its content. <br /> Space Cove organizes and provides access to this vast amount of NASA data. <br /> The objective of this NASA Open API is to make NASA data and imagery accessible to developers.</p>
       </section>
       <section className={styles.section5}>
         <p>By Kyle Larson</p>
