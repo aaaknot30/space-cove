@@ -36,13 +36,13 @@ export default async function Asteroids() {
   
   console.log("------------------- asteroids")
   let asteroids:string[] = []
-  asteroids = asteroids.concat(data.near_earth_objects[endDate])
-  asteroids = asteroids.concat(data.near_earth_objects[startDate])
+  // asteroids = asteroids.concat(data.near_earth_objects[endDate])
+  // asteroids = asteroids.concat(data.near_earth_objects[startDate])
 
 
-  // for (const value of Object.values(data.near_earth_objects)) {
-  //   asteroids = asteroids.concat(value)  
-  // }
+  for (const value of Object.values(data.near_earth_objects)) {
+    asteroids = asteroids.concat(value)  
+  }
 
    console.log("---- end ")
    console.log("asteroids", asteroids.length)
