@@ -3,7 +3,6 @@ import Script from 'next/script';
 import '../globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
-import asteroids from '../../json/asteroids2'
 import MyChart from '../../components/MyChart'
 import { Fragment } from 'react';
  
@@ -12,12 +11,17 @@ export const metadata: Metadata = {
   title: 'Space Cove - Asteroids',
 };
 
+const date = new Date()
+const monthConverted = date.getMonth()+1 < 10 ? `0${date.getMonth()+1}` : date.getMonth()+1
+console.log('monthConverted', monthConverted)
+
+const startDate = `${date.getFullYear()}-${monthConverted}-${date.getDate()-1}`
+const endDate = `${date.getFullYear()}-${monthConverted}-${date.getDate()}`
 
 async function getData() {
-  const date = new Date()
+  
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-1}`
-  const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+  
   console.log(startDate, endDate)
   const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
   const data = await res.json();
@@ -31,31 +35,44 @@ export default async function Asteroids() {
   const data = await getData();
   
   console.log("------------------- asteroids")
-  let asteroids = []
-  let legend
+  let asteroids:string[] = []
+  asteroids = asteroids.concat(data.near_earth_objects[endDate])
+  asteroids = asteroids.concat(data.near_earth_objects[startDate])
 
-  for (const [key, value] of Object.entries(data.near_earth_objects)) {
-    asteroids = asteroids.concat(Array.from(value))
-    legend = key
-  }
+
+  // for (const value of Object.values(data.near_earth_objects)) {
+  //   asteroids = asteroids.concat(value)  
+  // }
 
    console.log("---- end ")
    console.log("asteroids", asteroids.length)
 
   let dataChart = []
 
+  interface TmpObject {
+    name: string,
+    ft: number,
+    vlc: number,
+    mdist: number,
+
+
+  }
+
    for (const item of asteroids) {
-    console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
-    const tmpObj = {}
-    tmpObj.name = item.name
-    tmpObj.ft = parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
-    tmpObj.vlc = parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed())
-    tmpObj.mdist = parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
+    //console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
+    const tmpObj: TmpObject = {
+      name: JSON.stringify(item['name']),
+      ft: parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed()),
+      vlc: parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()),
+      mdist: parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
+
+    }
+    
     dataChart.push(tmpObj)
     //console.log(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
    }
 
-   console.log(dataChart)
+   //console.log(dataChart)
 
 
 
@@ -64,7 +81,7 @@ export default async function Asteroids() {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
         <div>
           <h2>Space Cove - Asteroids</h2>
-          <p><strong>Date: {legend} - {asteroids.length} asteroids observed. </strong> </p>
+          <p><strong>Date: {asteroids.length} asteroids observed. </strong> </p>
           <h3>Asteroids</h3>
         </div>
        

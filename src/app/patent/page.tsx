@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import { revalidatePath } from "next/cache";
-import patent from '../../json/patent2'
 import renderHTML from 'react-render-html';
 
 

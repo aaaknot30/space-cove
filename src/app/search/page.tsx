@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import { revalidatePath } from "next/cache";
-import searchResponse from '../../json/search1'
 
 
 export const metadata: Metadata = {

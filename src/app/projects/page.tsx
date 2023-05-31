@@ -3,7 +3,6 @@ import '../globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
 import data1 from '../../json/projects'
-import dataProject from '../../json/project2'
 import { Fragment } from 'react';
 import { revalidatePath } from "next/cache";
  
