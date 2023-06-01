@@ -20,10 +20,8 @@ const endDate = `${date.getFullYear()}-${monthConverted}-${date.getDate()}`
 
 async function getData() {
   
-  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  
   console.log(startDate, endDate)
-  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
+  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${process.env.DATA_API_KEY}`);
   const data = await res.json();
   return data;
 }

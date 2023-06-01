@@ -12,14 +12,10 @@ const BASE_URL = process.env.BASE_URL;
 
 async function getData() {
 
-  // const response = await fetch(`${BASE_URL}/api/dailyPic`, { next: { revalidate: 3600 } });
-  // return response.json();
-
-  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`);
+  process.env.DATA_API_KEY
+  const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.DATA_API_KEY}`);
   const data = await res.json();
   return data
-
 }
 
 export default async function Apod() {

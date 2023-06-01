@@ -37,8 +37,7 @@ async function getData() {
   console.log("searchSol", searchSol)
   sol = searchSol[0] ? searchSol[0] : Math.floor(Math.random() * 99) + 1;
   rover = roverList[0] ? roverList[0] : roverGroup[(Math.floor(Math.random() * 2))]
-  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${key}`
+  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${process.env.DATA_API_KEY}`
   console.log(url)
   const res = await fetch(url);
   return res.json();;
