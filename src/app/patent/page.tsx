@@ -36,7 +36,8 @@ async function getData() {
   console.log("--------- --------- getData")
   console.log("searchWords", searchWords)
   search = searchWords[0] ? searchWords[0] : 'engine'
-  const url = `https://api.nasa.gov/techtransfer/patent/?${search}&api_key=${process.env.DATA_API_KEY}`
+  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
+  const url = `https://api.nasa.gov/techtransfer/patent/?${search}&api_key=${key}`
   console.log(url)
   const res = await fetch(url);
   return res.json();;

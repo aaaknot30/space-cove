@@ -28,13 +28,27 @@ async function formSubmit(formData: FormData) {
 
 async function getProject() {
   const queryId = searchId[0] ? searchId[0] : '94064'
+  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   // https://api.nasa.gov/techport/api/projects/94064?api_key=vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs
-  const res = await fetch(`https://api.nasa.gov/techport/api/projects/${queryId}?api_key=${process.env.DATA_API_KEY}`);
+  const res = await fetch(`https://api.nasa.gov/techport/api/projects/${queryId}?api_key=${key}`);
   const data = await res.json();
   const project = data.project
   projectData = project
   console.log(project.title)
   return project;
+}
+
+
+async function getData() {
+  // 'use server'
+  // const date = new Date()
+  // const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
+  // const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-1}`
+  // const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+  // console.log(startDate, endDate)
+  // const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
+  // const data = await res.json();
+  // return data;
 }
 
 

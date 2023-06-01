@@ -6,12 +6,18 @@
 }
 
 .background {
-
+  /* background-image: url('../../../public/img/asteroid.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: blue;
+  background-blend-mode:hard-light;
+  color: white; */
   padding: 1rem 2rem;
   display: grid;
   grid-template-columns: auto 600px;
   justify-content: start;
-  gap: 4rem;
+  gap: 5rem;
 
 }
 
@@ -24,11 +30,7 @@
 }
 
 .h2 {
-  margin: 2rem 0 0 0;
-}
-
-.graphTitle {
-  margin: 0 0 1rem 0;
+  margin-top: 0;
 }
 
 .link {
@@ -39,33 +41,4 @@
   background-color: #000;
   padding: 1rem;
   width: 100vw;
-}
-
-.grid1 {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  justify-content: start;
-  align-items: start;
-  gap: 2rem;
-  margin: 0 0 4rem 0;
-}
-
-.grid2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: start;
-  align-items: start;
-  gap: 5rem;
-  margin: 0 0 0 0;
-}
-
-.sideBackground {
-  background-image: url('../../../public/img/side_background.jpg');
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #666;
-  width: 300px;
-  height: 90vh;
-
 }
