@@ -66,7 +66,7 @@ export default async function Projects({searchParams}) {
     <main>
         <div className={styles.grid1}>
           <div>
-            <h2 className={styles.h2}>Space Cove - Projects</h2>
+            <h2 className={styles.h2}>NASA Projects</h2>
             <div className={styles.grid2}>
             <div>  
               <form className={styles.form} action={formSubmit}>

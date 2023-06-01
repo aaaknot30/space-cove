@@ -29,7 +29,7 @@ export default async function Apod() {
   return (
     <main>
       
-        <h2>Space Cove - Apod</h2>
+        <h2>Daily Pic</h2>
         <p>{data.title}</p>
         <div className={styles.background}>
           <div>
