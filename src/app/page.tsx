@@ -21,19 +21,19 @@ export default function Home() {
           <h1 className="title2">Explore. Discover. Learn.</h1>
         
           
-          <Link href="/apod">
+          <Link className={styles.cardLink} href="/apod">
             <div className="card">
               <h2><strong>Pic of the Day</strong></h2>
               <FontAwesomeIcon className="icon" icon={faCamera} size = {'xl'} />
             </div>
           </Link> 
-          <Link href="/rover">
+          <Link className={styles.cardLink} href="/rover">
             <div className="card">
               <h2><strong>Rover Photos</strong></h2>
               <FontAwesomeIcon className="icon" icon={faTruckPickup} size = {'xl'} />
             </div> 
           </Link>
-          <Link href="/search">
+          <Link className={styles.cardLink} href="/search">
             <div className="card">
               <h2><strong>Media Search</strong></h2>
               <FontAwesomeIcon className="icon" icon={faVideo} size = {'xl'} />
@@ -41,19 +41,19 @@ export default function Home() {
           </Link>
 
 
-          <Link href="/asteroids">  
+          <Link className={styles.cardLink} href="/asteroids">  
             <div className="card">
               <h2><strong>Daily Asteroids</strong></h2>
               <FontAwesomeIcon className="icon" icon={faMeteor} size = {'xl'} />
             </div> 
           </Link>
-          <Link href="/patent">
+          <Link className={styles.cardLink} href="/patent">
             <div className="card">
               <h2><strong>Patents</strong></h2>
               <FontAwesomeIcon className="icon" icon={faLightbulb} size = {'xl'} />
             </div> 
           </Link>
-          <Link href="/projects">
+          <Link className={styles.cardLink} href="/projects">
             <div className="card">
               <h2><strong>Projects</strong></h2>
               <FontAwesomeIcon className="icon" icon={faWrench} size = {'xl'} />

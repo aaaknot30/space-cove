@@ -82,7 +82,7 @@ export default async function Projects({searchParams}) {
                     )
                   })}
               </select>  
-              <input type="submit" />
+              <input className={styles.button} type="submit" />
               </form>
             </div>
 

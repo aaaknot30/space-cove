@@ -53,7 +53,7 @@ export default async function RoverCam() {
   return (
     <main>
         <div className={styles.flex}>
-          <h2>Mars Rover Cams</h2>
+          <h2 className={styles.h2}>Mars Rover Cams</h2>
           <form action={formSubmit}  className={styles.flex}>
             <label htmlFor="day"><strong>Day of Mission:</strong>  <input
                 type="text"
@@ -70,6 +70,7 @@ export default async function RoverCam() {
                   <option value="spirit">spirit</option>
             </select></label>
             <button
+                className={styles.button}
                 type="submit">
                 Search Rover Cam
             </button>

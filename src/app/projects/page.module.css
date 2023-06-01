@@ -75,3 +75,13 @@
 .form {
   margin: .7rem 0 0 0;
 }
+
+.button {
+  margin: .5rem 0 0 0;
+  padding: .3rem .7rem;
+  background-color: #222;
+  color: #fff;
+  font-weight: 700;
+  border-radius: .3rem;
+  
+}

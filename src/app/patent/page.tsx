@@ -60,7 +60,7 @@ export default async function Search() {
   return (
     <main>
         <div className={styles.flex}>
-          <h2>Patents Search</h2>
+          <h2 className={styles.h2}>Patents Search</h2>
           <form action={formSubmit}  className={styles.flex}>
             <input
                 type="text"
@@ -68,15 +68,8 @@ export default async function Search() {
                 id="search"
                 width="100px"
                 placeholder="Search" />
-            {/* <label 
-                htmlFor="isVideo"> Video only
-                <input 
-                    type="checkbox"
-                    name="isVideo"
-                    id="isVideo" 
-                    value="false" />
-            </label> */}
             <button
+                className={styles.button}
                 type="submit">
                 Search
             </button>
