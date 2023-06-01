@@ -6,7 +6,7 @@ import styles from './page.module.css'
 export default function MyChart({mode, dataChart}) {
 
   const [data, setData] = useState([])
-  useEffect(() => setData(dataChart), [])
+  useEffect(() => setData(dataChart), [dataChart])
 
   return (
   <div className={styles.graph}>

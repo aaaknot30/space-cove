@@ -33,10 +33,7 @@ export default async function Asteroids() {
   const data = await getData();
   
   console.log("------------------- asteroids")
-  let asteroids:string[] = []
-  // asteroids = asteroids.concat(data.near_earth_objects[endDate])
-  // asteroids = asteroids.concat(data.near_earth_objects[startDate])
-
+  let asteroids = []
 
   for (const value of Object.values(data.near_earth_objects)) {
     asteroids = asteroids.concat(value)  
@@ -57,22 +54,14 @@ export default async function Asteroids() {
   }
 
    for (const item of asteroids) {
-    //console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
-    const tmpObj: TmpObject = {
-      name: JSON.stringify(item['name']),
-      ft: parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed()),
-      vlc: parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()),
-      mdist: parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
-
-    }
-    
-    dataChart.push(tmpObj)
-    //console.log(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
+      const tmpObj: TmpObject = {
+        name: JSON.stringify(item['name']),
+        ft: parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed()),
+        vlc: parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()),
+        mdist: parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
+      }
+      dataChart.push(tmpObj)
    }
-
-   //console.log(dataChart)
-
-
 
   return (
     <main>
