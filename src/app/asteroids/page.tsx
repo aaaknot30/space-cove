@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import MyChart from '../../components/MyChart'
 import { Fragment } from 'react';
-import asteroidsFile from '../../json/asteroids3.json';
-console.log(asteroidsFile)
  
 
 export const metadata: Metadata = {
@@ -14,35 +12,23 @@ export const metadata: Metadata = {
 };
 
 
+
 async function getData() {
   const date = new Date()
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-1}`
-  const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
-  console.log(startDate, endDate)
-  // const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
-  // const data = await res.json();
-  // return data;
-  return asteroidsFile
+  // const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-2}`
+  // const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
+  // console.log(startDate, endDate)
+  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=${key}`);
+  const data = await res.json();
+  return data;
 }
 
 
 export default async function Asteroids() {
 
-
   const data = await getData();
-  
-  console.log("------------------- asteroids")
-  let asteroids = []
-  let legend
-
-  for (const [key, value] of Object.entries(data['near_earth_objects'])) {
-      console.log("key:value", key + ":" + value)
-      const tmpArr = data.near_earth_objects[key] ? data.near_earth_objects[key] : []
-      asteroids = asteroids.concat(tmpArr)
-      legend = key
-  }
-
+  let asteroids = data['near_earth_objects']
    console.log("---- end ")
    console.log("asteroids", asteroids.length)
 
@@ -56,7 +42,6 @@ export default async function Asteroids() {
   }
 
    for (const item of asteroids) {
-    //console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
     let tmpObj:TmpObj = {
       name: '',
       ft: 0,
@@ -81,7 +66,7 @@ export default async function Asteroids() {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
         <div>
           <h2>Space Cove - Asteroids</h2>
-          <p><strong>Date: {legend} - {asteroids.length} asteroids observed. </strong> </p>
+          <p><strong>Date: {asteroids.length} asteroids observed. </strong> </p>
           <h3>Asteroids</h3>
         </div>
        
