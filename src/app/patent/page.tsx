@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import { revalidatePath } from "next/cache";
-import renderHTML from 'react-render-html';
 
 
 export const metadata: Metadata = {
@@ -12,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 
-const searchWords = []
-let search
+const searchWords = ['fuel']
+let search = 'fuel'
 let isVideoOnly = false
 
 async function formSubmit(formData: FormData) {

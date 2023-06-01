@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 };
 
 
-const searchSol = []
-const roverList = []
-let sol
-let rover
+const searchSol:number[] = [1]
+const roverList:string[] = ['opportunity']
+let sol:number
+let rover:string
 
 async function formSubmit(formData: FormData) {
   'use server'
   console.log("--- formsubmit")
   console.log(formData)
-  const sol = formData.get("sol") as int;
+  const sol = parseInt(formData.get("sol") as string);
   const vehicle = formData.get("rover") as string;
   console.log("--- sol")
   console.log(sol)
@@ -55,13 +55,13 @@ export default async function RoverCam() {
         <div className={styles.flex}>
           <h2>Mars Rover Cams</h2>
           <form action={formSubmit}  className={styles.flex}>
-            <label for="day"><strong>Day of Mission:</strong>  <input
+            <label htmlFor="day"><strong>Day of Mission:</strong>  <input
                 type="text"
                 name="sol" 
                 id="day"
                 width="100px"
                 placeholder="1-1000" /></label>
-            <label for="model"><strong>Rover model:</strong>  
+            <label htmlFor="model"><strong>Rover model:</strong>  
              <select
                 name="rover"
                 id="model">

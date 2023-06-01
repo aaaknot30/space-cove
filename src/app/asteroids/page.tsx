@@ -3,9 +3,10 @@ import Script from 'next/script';
 import '../globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
-import asteroids from '../../json/asteroids2'
 import MyChart from '../../components/MyChart'
 import { Fragment } from 'react';
+import asteroidsFile from '../../json/asteroids3.json';
+console.log(asteroidsFile)
  
 
 export const metadata: Metadata = {
@@ -19,9 +20,10 @@ async function getData() {
   const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-1}`
   const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
   console.log(startDate, endDate)
-  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
-  const data = await res.json();
-  return data;
+  // const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
+  // const data = await res.json();
+  // return data;
+  return asteroidsFile
 }
 
 
@@ -34,28 +36,43 @@ export default async function Asteroids() {
   let asteroids = []
   let legend
 
-  for (const [key, value] of Object.entries(data.near_earth_objects)) {
-    asteroids = asteroids.concat(Array.from(value))
-    legend = key
+  for (const [key, value] of Object.entries(data['near_earth_objects'])) {
+      console.log("key:value", key + ":" + value)
+      const tmpArr = data.near_earth_objects[key] ? data.near_earth_objects[key] : []
+      asteroids = asteroids.concat(tmpArr)
+      legend = key
   }
 
    console.log("---- end ")
    console.log("asteroids", asteroids.length)
 
-  let dataChart = []
+  let dataChart:TmpObj[] = []
+
+  interface TmpObj {
+    name: string,
+    ft: number,
+    vlc: number,
+    mdist: number,
+  }
 
    for (const item of asteroids) {
-    console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
-    const tmpObj = {}
-    tmpObj.name = item.name
-    tmpObj.ft = parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
-    tmpObj.vlc = parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed())
-    tmpObj.mdist = parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
+    //console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
+    let tmpObj:TmpObj = {
+      name: '',
+      ft: 0,
+      vlc: 0,
+      mdist: 0,
+
+    }
+    tmpObj.name = item['name'] 
+    tmpObj.ft = item['estimated_diameter']['feet']['estimated_diameter_max']
+    tmpObj.vlc = parseInt(item['close_approach_data'][0]['relative_velocity']['miles_per_hour'])
+    tmpObj.mdist = parseInt(item['close_approach_data'][0]['miss_distance']['miles'])
     dataChart.push(tmpObj)
     //console.log(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
    }
 
-   console.log(dataChart)
+   //console.log(dataChart)
 
 
 
@@ -71,16 +88,16 @@ export default async function Asteroids() {
         <div className={styles.background}>
             <div>
                 {asteroids.map((item, index) => {
-                  const feet = parseInt(item.estimated_diameter.feet['estimated_diameter_max']).toFixed();
+                  const feet = parseInt(item['estimated_diameter']['feet']['estimated_diameter_max']).toFixed();
                   const feet_commas = feet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                  const velocity = parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed();
+                  const velocity = parseInt(item['close_approach_data'][0]['relative_velocity']['miles_per_hour']).toFixed();
                   const velocity_commas = velocity.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                  const distance = parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed();
+                  const distance = parseInt(item['close_approach_data'][0]['miss_distance']['miles']).toFixed();
                   const distance_commas = distance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                   //console.log(commas); 
                   return (
                     <div key={index}>
-                      <p>Name: {item.name}</p>
+                      <p>Name: {item['name']}</p>
                       <ul className={styles.card} key={index}>
                         {/* <p>Id: {item.id}</p> */}
                         <li>Estimated Max. Diameter (ft): {feet_commas} ft</li>

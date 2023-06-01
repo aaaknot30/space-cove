@@ -2,7 +2,7 @@ import styles from './page.module.css'
 import '../globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
-import data1 from '../../json/projects'
+import data1 from '../../json/projects.json'
 import { Fragment } from 'react';
 import { revalidatePath } from "next/cache";
  

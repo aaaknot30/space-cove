@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 };
 
 
-const searchWords = []
-let search
-let isVideoOnly = false
+const searchWords:string[] = ['moon']
+let search:string
+let isVideoOnly = "false"
 
 async function formSubmit(formData: FormData) {
   'use server'
   console.log("--- formsubmit")
   console.log(formData)
   const search = formData.get("search") as string;
-  const isVideo = formData.get("isVideo") as boolean;
+  const isVideo = formData.get("isVideo") as string;
   console.log("--- search")
   console.log(search)
   console.log("--- isVideo")
