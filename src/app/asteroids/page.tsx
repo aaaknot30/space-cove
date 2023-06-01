@@ -12,14 +12,21 @@ export const metadata: Metadata = {
 };
 
 
-
+let searchDate
+let searchDateYester
 async function getData() {
-  const date = new Date()
+  const today = new Date()
+  const yesterday = new Date()
+  yesterday.setDate(today.getDate() - 1)
+  searchDate = today.toISOString().split('T')[0]
+  searchDateYester = yesterday.toISOString().split('T')[0]
+  // searchDate = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`
+  console.log("searchDate and searchDateYester", searchDate + " and " + searchDateYester)
+
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  // const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-2}`
-  // const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
-  // console.log(startDate, endDate)
-  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=${key}`);
+ 
+  //const res = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=${key}`);
+  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${searchDateYester}&end_date=${searchDate}&api_key=${key}`);
   const data = await res.json();
   return data;
 }
@@ -28,7 +35,8 @@ async function getData() {
 export default async function Asteroids() {
 
   const data = await getData();
-  let asteroids = data['near_earth_objects']
+  let asteroids = data['near_earth_objects'][searchDate]
+  asteroids = asteroids.concat(data['near_earth_objects'][searchDateYester])
    console.log("---- end ")
    console.log("asteroids", asteroids.length)
 
@@ -66,7 +74,7 @@ export default async function Asteroids() {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
         <div>
           <h2>Space Cove - Asteroids</h2>
-          <p><strong>Date: {asteroids.length} asteroids observed. </strong> </p>
+          <p><strong>Date: {searchDate} - {asteroids.length} asteroids observed. </strong> </p>
           <h3>Asteroids</h3>
         </div>
        
