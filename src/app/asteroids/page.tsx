@@ -79,14 +79,13 @@ export default async function Asteroids() {
   return (
     <main>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
+      <div className={styles.grid1}>
         <div>
-          <h2>Space Cove - Asteroids</h2>
+          <h2 className={styles.h2}>Space Cove - Asteroids</h2>
           <p><strong>Date: </strong> {endDate} <strong>{asteroids.length}</strong>  asteroids observed. </p>
           <h3>Asteroids</h3>
-        </div>
-       
-        <div className={styles.background}>
-            <div>
+            <div className={styles.grid2}>
+              <div>  
                 {asteroids.map((item, index) => {
                   const feet = parseInt(item.estimated_diameter.feet['estimated_diameter_max']).toFixed();
                   const feet_commas = feet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -104,19 +103,24 @@ export default async function Asteroids() {
                         <li>Relative Velocity (mph): {velocity_commas} mph</li>
                         <li>Distance from Earth: {distance_commas} miles</li>
                       </ul>
-                    </div>
-                  )
-                })}
-            </div>
-            <div>
-                <h2 className={styles.h2}>Asteroids size in feet</h2> <MyChart mode='ft' dataChart={dataChart} />
+                    </div>)
+                  })
+                  }
+                </div>
+              <div>
+                <h2 className={styles.graphTitle}>Asteroids size in feet</h2> <MyChart mode='ft' dataChart={dataChart} />
                 <br />
                 <h2 className={styles.h2}>Asteroids speed in mph</h2> <MyChart mode='vlc' dataChart={dataChart} />
                 <br />
                 <h2 className={styles.h2}>Asteroids miles from Erath</h2> <MyChart mode='mdist' dataChart={dataChart} />
+              </div>
             </div>
         </div>
-          
-    </main>
+        <div className={styles.sideBackground}>    
+        </div>
+
+      </div>  
+      </main>
+
   )
 }

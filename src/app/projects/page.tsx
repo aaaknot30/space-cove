@@ -39,19 +39,6 @@ async function getProject() {
 }
 
 
-async function getData() {
-  // 'use server'
-  // const date = new Date()
-  // const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  // const startDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()-1}`
-  // const endDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
-  // console.log(startDate, endDate)
-  // const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
-  // const data = await res.json();
-  // return data;
-}
-
-
 export default async function Projects({searchParams}) {
   console.log("----------  searchParams")
   console.log(searchParams.id)
