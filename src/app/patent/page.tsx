@@ -81,9 +81,9 @@ export default async function Search() {
             return (
 
               <div key={i}>
-                <p><strong><div dangerouslySetInnerHTML={{__html: item[2]}} /></strong></p>
+                <strong><div dangerouslySetInnerHTML={{__html: item[2]}} /></strong>
                 <p>{item[1]}</p>
-                <p><div dangerouslySetInnerHTML={{__html: item[3].substring(0, 300)}} />...</p>
+                <div dangerouslySetInnerHTML={{__html: item[3].substring(0, 300)}} />...
                 <a target="_blank" href={item[10]}>
                     <Image
                       src={item[10]}

@@ -1,7 +1,10 @@
+'use client';
+ 
 import './globals.css'
 import styles from './styles.module.css';
 import { Inter } from 'next/font/google';
 import { Roboto } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
  
 
@@ -14,15 +17,16 @@ export const metadata = {
 
 
 function Nav() {
+  const pathname = usePathname();
   return (
     <nav className={styles.nav}>
-      <Link className={styles.link} href="/">Home</Link>
-      <Link className={styles.link} href="/apod">Daily Pic</Link>
-      <Link className={styles.link} href="/rover">Rover</Link>
-      <Link className={styles.link} href="/search">Media Search</Link>
-      <Link className={styles.link} href="/asteroids">Daily Asteroids</Link>
-      <Link className={styles.link} href="/patent">Patents Search</Link>
-      <Link className={styles.link} href="/projects">Projects Search</Link>
+      <Link className={pathname === '/' ? styles.activeLink : styles.link} href="/">Home</Link>
+      <Link className={pathname === '/apod' ? styles.activeLink : styles.link} href="/apod">Daily Pic</Link>
+      <Link className={pathname === '/rover' ? styles.activeLink : styles.link} href="/rover">Rover</Link>
+      <Link className={pathname === '/search' ? styles.activeLink : styles.link} href="/search">Media Search</Link>
+      <Link className={pathname === '/asteroids' ? styles.activeLink : styles.link} href="/asteroids">Daily Asteroids</Link>
+      <Link className={pathname === '/patent' ? styles.activeLink : styles.link} href="/patent">Patents Search</Link>
+      <Link className={pathname === '/projects' ? styles.activeLink : styles.link} href="/projects">Projects Search</Link>
     </nav>
   )
 }

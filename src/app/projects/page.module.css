@@ -66,9 +66,10 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #666;
+  background-color: #2cc;
   width: 300px;
-  height: 80vh;
+  height: 90vh;
+  background-blend-mode:color-burn;
 
 }
 
