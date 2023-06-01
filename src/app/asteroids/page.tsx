@@ -20,8 +20,10 @@ const endDate = `${date.getFullYear()}-${monthConverted}-${date.getDate()}`
 
 async function getData() {
   
+  const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
+  
   console.log(startDate, endDate)
-  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${process.env.DATA_API_KEY}`);
+  const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${key}`);
   const data = await res.json();
   return data;
 }
@@ -33,7 +35,10 @@ export default async function Asteroids() {
   const data = await getData();
   
   console.log("------------------- asteroids")
-  let asteroids = []
+  let asteroids:string[] = []
+  // asteroids = asteroids.concat(data.near_earth_objects[endDate])
+  // asteroids = asteroids.concat(data.near_earth_objects[startDate])
+
 
   for (const value of Object.values(data.near_earth_objects)) {
     asteroids = asteroids.concat(value)  
@@ -54,25 +59,34 @@ export default async function Asteroids() {
   }
 
    for (const item of asteroids) {
-      const tmpObj: TmpObject = {
-        name: JSON.stringify(item['name']),
-        ft: parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed()),
-        vlc: parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()),
-        mdist: parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
-      }
-      dataChart.push(tmpObj)
+    //console.log(typeof parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()))
+    const tmpObj: TmpObject = {
+      name: JSON.stringify(item['name']),
+      ft: parseInt(item.estimated_diameter.feet['estimated_diameter_max'].toFixed()),
+      vlc: parseInt(parseInt(item.close_approach_data[0].relative_velocity['miles_per_hour']).toFixed()),
+      mdist: parseInt(parseInt(item.close_approach_data[0].miss_distance['miles']).toFixed())
+
+    }
+    
+    dataChart.push(tmpObj)
+    //console.log(item.estimated_diameter.feet['estimated_diameter_max'].toFixed())
    }
+
+   //console.log(dataChart)
+
+
 
   return (
     <main>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
-      <div className={styles.grid1}>
         <div>
-          <h2 className={styles.h2}>Space Cove - Asteroids</h2>
+          <h2>Space Cove - Asteroids</h2>
           <p><strong>Date: </strong> {endDate} <strong>{asteroids.length}</strong>  asteroids observed. </p>
           <h3>Asteroids</h3>
-            <div className={styles.grid2}>
-              <div>  
+        </div>
+       
+        <div className={styles.background}>
+            <div>
                 {asteroids.map((item, index) => {
                   const feet = parseInt(item.estimated_diameter.feet['estimated_diameter_max']).toFixed();
                   const feet_commas = feet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -90,24 +104,19 @@ export default async function Asteroids() {
                         <li>Relative Velocity (mph): {velocity_commas} mph</li>
                         <li>Distance from Earth: {distance_commas} miles</li>
                       </ul>
-                    </div>)
-                  })
-                  }
-                </div>
-              <div>
-                <h2 className={styles.graphTitle}>Asteroids size in feet</h2> <MyChart mode='ft' dataChart={dataChart} />
+                    </div>
+                  )
+                })}
+            </div>
+            <div>
+                <h2 className={styles.h2}>Asteroids size in feet</h2> <MyChart mode='ft' dataChart={dataChart} />
                 <br />
                 <h2 className={styles.h2}>Asteroids speed in mph</h2> <MyChart mode='vlc' dataChart={dataChart} />
                 <br />
                 <h2 className={styles.h2}>Asteroids miles from Erath</h2> <MyChart mode='mdist' dataChart={dataChart} />
-              </div>
             </div>
         </div>
-        <div className={styles.sideBackground}>    
-        </div>
-
-      </div>  
-      </main>
-
+          
+    </main>
   )
 }
