@@ -39,7 +39,7 @@ export default async function Apod() {
             <a target="_blank" href={data.url}>
               <Image
               src={data.media_type === 'image' ? data.url : '/img/xxvideo_placeholder.jpg'}
-              width={500}
+              width={600}
               height={500}
               alt="Picture"
           />

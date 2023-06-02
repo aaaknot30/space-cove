@@ -11,38 +11,31 @@ export const metadata: Metadata = {
 };
 
 
-const searchSol:number[] = [1]
-const roverList:string[] = ['opportunity']
-let sol:number
-let rover:string
+
+let sol = Math.floor(Math.random() * 99) + 1
+
+const roverGroup = ['curiosity','opportunity','spirit']
+let rover = roverGroup[(Math.floor(Math.random() * 2))]
+
+
 
 async function formSubmit(formData: FormData) {
   'use server'
-  console.log("--- formsubmit")
-  console.log(formData)
-  const sol = parseInt(formData.get("sol") as string);
-  const vehicle = formData.get("rover") as string;
-  console.log("--- sol")
-  console.log(sol)
-  searchSol.unshift(sol)
-  roverList.unshift(vehicle)
+  sol = parseInt(formData.get("sol") as string);
+  rover = formData.get("rover") as string;
   revalidatePath("/");
 }
 
-const roverGroup = ['curiosity','opportunity','spirit']
 
 
 async function getData() {
-  console.log("--------- --------- getData")
-  console.log("searchSol", searchSol)
-  sol = searchSol[0] ? searchSol[0] : Math.floor(Math.random() * 99) + 1;
-  rover = roverList[0] ? roverList[0] : roverGroup[(Math.floor(Math.random() * 2))]
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=${sol}&api_key=${key}`
   console.log(url)
   const res = await fetch(url);
   return res.json();;
 }
+
 
 
 export default async function RoverCam() {
@@ -80,17 +73,19 @@ export default async function RoverCam() {
        
         <div className={styles.grid}>
 
-          {photos.slice(0,16).map((item, index) => {
+          {photos.slice(0,20).map((item, index) => {
             
             return (
               <div key={index}>
-                <p>{item.camera.full_name} - {item.earth_date}</p>
-                <Image
-                  src={item.img_src}
-                  width={300}
-                  height={300}
-                  alt="Cam"
-                  />
+                <a target="_blank" href={item.img_src}>
+                  <p>{item.camera.full_name} - {item.earth_date}</p>
+                  <Image
+                    src={item.img_src}
+                    width={300}
+                    height={300}
+                    alt="Cam"
+                    />
+                  </a> 
               </div>
             )
           })}

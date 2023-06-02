@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: 'Space Cove - Asteroids',
 };
 
-
-const searchId = ['94064']
+const projects = data1.projects
+let searchId
 let projectData
 
 async function formSubmit(formData: FormData) {
@@ -22,18 +22,17 @@ async function formSubmit(formData: FormData) {
   const id = formData.get("id") as string;
   console.log("--- id")
   console.log(id)
-  searchId.unshift(id)
+  searchId = id
   revalidatePath("/");
 }
 
 async function getProject() {
-  const queryId = searchId[0] ? searchId[0] : '94064'
+  const queryId = searchId ? searchId : projects[Math.floor(Math.random() * 100)].projectId
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   // https://api.nasa.gov/techport/api/projects/94064?api_key=vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs
   const res = await fetch(`https://api.nasa.gov/techport/api/projects/${queryId}?api_key=${key}`);
   const data = await res.json();
   const project = data.project
-  projectData = project
   console.log(project.title)
   return project;
 }
@@ -58,7 +57,6 @@ export default async function Projects({searchParams}) {
 
 
   //const data = await getData();
-  const projects = data1.projects
   projectData = await getProject()
   //console.log(projectData)
   

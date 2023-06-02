@@ -72,12 +72,11 @@ export default async function Asteroids() {
   return (
     <main>
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></Script>
-        <div>
-          <h2>Asteroids</h2>
-          <p><strong>Date: {searchDate} - {asteroids.length} asteroids observed. </strong> </p>
-        </div>
-       
-        <div className={styles.background}>
+        <div className={styles.grid1}>
+          <div>
+            <h2 className={styles.h2}>Asteroids</h2>
+            <p><strong>Date: {searchDate} - {asteroids.length} asteroids observed. </strong> </p>
+            <div className={styles.grid2}>
             <div>
                 {asteroids.map((item, index) => {
                   const feet = parseInt(item['estimated_diameter']['feet']['estimated_diameter_max']).toFixed();
@@ -107,6 +106,12 @@ export default async function Asteroids() {
                 <br />
                 <h2 className={styles.h2}>Asteroids miles from Erath</h2> <MyChart mode='mdist' dataChart={dataChart} />
             </div>
+            </div>
+          </div>
+          <div className={styles.sideBackground}>
+                  
+          </div>
+
         </div>
           
     </main>

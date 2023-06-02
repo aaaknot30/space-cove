@@ -15,7 +15,7 @@
 }
 
 .h2 {
-  margin: 0 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .link {
@@ -30,4 +30,34 @@
 
 .chart {
   margin: 0;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin: 0 0 0 0;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 300px auto;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin: 0 0 0 0;
+}
+
+.sideBackground {
+  background-image: url('../../../public/img/side_background.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #2cc;
+  width: 300px;
+  height: 90vh;
+  background-blend-mode:color-burn;
+
 }

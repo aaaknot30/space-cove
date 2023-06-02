@@ -11,29 +11,20 @@ export const metadata: Metadata = {
 };
 
 
-const searchWords:string[] = ['moon']
-let search:string
+const searchWords = ['heat', 'moon', 'planet', 'solar']
+let search = searchWords[Math.floor(Math.random() * 4)]
 let isVideoOnly = "false"
 
 async function formSubmit(formData: FormData) {
   'use server'
-  console.log("--- formsubmit")
-  console.log(formData)
-  const search = formData.get("search") as string;
+  const searchWord = formData.get("search") as string;
   const isVideo = formData.get("isVideo") as string;
-  console.log("--- search")
-  console.log(search)
-  console.log("--- isVideo")
-  console.log(isVideo)
   isVideoOnly = isVideo
-  searchWords.unshift(search)
+  search = searchWord
   revalidatePath("/");
 }
 
 async function getData() {
-  console.log("--------- --------- getData")
-  console.log("searchWords", searchWords)
-  search = searchWords[0] ? searchWords[0] : 'moon'
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   const url = `https://images-api.nasa.gov/search?q=${search}`
   console.log(url)
