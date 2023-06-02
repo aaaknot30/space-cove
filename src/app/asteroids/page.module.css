@@ -43,7 +43,7 @@
 
 .grid2 {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 360px auto;
   justify-content: start;
   align-items: start;
   gap: 2rem;
