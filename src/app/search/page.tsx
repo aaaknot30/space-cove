@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 
 const searchWords = ['heat', 'moon', 'planet', 'solar']
-let search = searchWords[Math.floor(Math.random() * 4)]
+let search = searchWords[Math.floor(Math.random() * 3)]
 let isVideoOnly = "false"
 
 async function formSubmit(formData: FormData) {
