@@ -40,6 +40,11 @@ main {
   margin: 0 0 0 2rem;
 }
 
+.errorGroup {
+  margin: 2rem;
+  padding: 2rem
+}
+
 
 @font-face {
   font-family: "LibreBaskerville";

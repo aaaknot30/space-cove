@@ -1,7 +1,10 @@
 'use client'; // Error components must be Client Components
- 
+
+import './globals.css'
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
+
  
 export default function Error({
   error,
@@ -14,20 +17,15 @@ export default function Error({
     // Log the error to an error reporting service
     console.error(error);
   }, [error]);
- 
+
   return (
-    <div>
+    <div className="errorGroup">
       <br />
       <br />
       <h2>Ooops! Looks like the search parameter was not found. Try starting over.</h2>
-      <br /><Link href="/">Home</Link><br />
-      <Link href="/apod">Daily Pic</Link><br />
-      <Link href="/rover">Rover</Link><br />
-      <Link href="/search">Media Search</Link><br />
-      <Link href="/asteroids">Daily Asteroids</Link><br />
-      <Link href="/patent">Patents Search</Link><br />
-      <Link href="/projects">Projects Search</Link><br />
-      
+      <br />
+      <h3><Link href="/">Home</Link></h3> <br />
+ 
     </div>
   );
 }

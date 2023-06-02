@@ -3,7 +3,8 @@ import '../globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
-import { revalidatePath } from "next/cache";
+import { revalidatePath } from 'next/cache';
+import backupSearch from '../../json/search2.json'
 
 
 export const metadata: Metadata = {
@@ -29,17 +30,19 @@ async function getData() {
   const url = `https://images-api.nasa.gov/search?q=${search}`
   console.log(url)
   const res = await fetch(url);
-  return res.json();;
+  let data = await res.json()
+  if (data['collection']['items'].length === 0) {
+    search = 'moon'
+    data = backupSearch
+  }
+  return data
 }
 
 
 export default async function Search() {
 
-
-  console.log('---------- searchResponse')
-  //console.log(searchResponse)
   const data = await getData();
-  const photos = data.photos
+
   let collection = isVideoOnly ? 
     data.collection.items.filter(item => item.data[0].media_type === 'video') :
     data.collection.items.filter((item, index) => index < 21)
