@@ -101,11 +101,11 @@ export default async function Asteroids() {
                 })}
             </div>
             <div>
-                <h2 className={styles.h2}>Asteroids size in feet</h2> <MyChart className={styles.chart} mode='ft' dataChart={dataChart} />
+                <h2 className={styles.h2}>Asteroids size in feet</h2> <MyChart mode='ft' dataChart={dataChart} />
                 <br />
-                <h2 className={styles.h2}>Asteroids speed in mph</h2> <MyChart className={styles.chart} mode='vlc' dataChart={dataChart} />
+                <h2 className={styles.h2}>Asteroids speed in mph</h2> <MyChart mode='vlc' dataChart={dataChart} />
                 <br />
-                <h2 className={styles.h2}>Asteroids miles from Erath</h2> <MyChart className={styles.chart} mode='mdist' dataChart={dataChart} />
+                <h2 className={styles.h2}>Asteroids miles from Erath</h2> <MyChart mode='mdist' dataChart={dataChart} />
             </div>
         </div>
           

@@ -10,11 +10,6 @@ import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Space Cove',
-  description: 'Web App NASA api',
-}
-
 
 function Nav() {
   const pathname = usePathname();
