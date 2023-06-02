@@ -86,8 +86,8 @@ export default async function Projects({searchParams}) {
 
             <div>
               <h3>{projectData.title} - {projectData.projectId}</h3>
-              <p><strong>Benefits:</strong> {projectData.benefits}</p> 
-              <p><strong>Description:</strong> {projectData.description}</p> 
+              <p><strong>Benefits:</strong></p><div dangerouslySetInnerHTML={{__html: projectData.benefits}} /> 
+              <p><strong>Description:</strong></p><div dangerouslySetInnerHTML={{__html: projectData.description}} />
               <p>{projectData.statusDescription}: {projectData.startYear} - {projectData.startYear}</p> 
             </div>
 
