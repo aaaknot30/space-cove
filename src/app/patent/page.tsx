@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Image from 'next/image'
 import { revalidatePath } from "next/cache";
+import defaultResponse from '../../json/patent1.json'
 
 
 export const metadata: Metadata = {
@@ -39,7 +40,11 @@ async function getData() {
   const url = `https://api.nasa.gov/techtransfer/patent/?${search}&api_key=${key}`
   console.log(url)
   const res = await fetch(url);
-  return res.json();;
+  let data = await res.json()
+  if (data.results.length === 0) {
+    data = defaultResponse
+  }
+  return data
 }
 
 
