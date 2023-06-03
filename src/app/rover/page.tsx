@@ -35,7 +35,7 @@ async function getData() {
   console.log(url)
   const res = await fetch(url);
   let data = await res.json()
-  if (data.results.length === 0) {
+  if (data.photos.length === 0) {
     data = defaultResponse
   }
   return data;
