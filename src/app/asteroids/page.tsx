@@ -27,7 +27,7 @@ async function getData() {
  
   //const res = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=${key}`);
   const res = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${searchDateYester}&end_date=${searchDate}&api_key=${key}`,
-   { next: { revalidate: 3600 } });
+  { cache: 'no-store' });
   const data = await res.json();
   return data;
 }
