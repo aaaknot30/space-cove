@@ -16,7 +16,7 @@ async function getData() {
   // return response.json();
 
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
-  const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`);
+  const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`, { cache: 'no-store' });
   const data = await res.json();
   return data
 
