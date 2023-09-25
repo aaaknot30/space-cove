@@ -30,7 +30,7 @@ async function getProject() {
   const queryId = searchId ? searchId : projects[Math.floor(Math.random() * 100)].projectId
   const key = 'vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs';
   // https://api.nasa.gov/techport/api/projects/94064?api_key=vT0eAzxpHVDuOw5GxU9TfZcHJ8WTVVbP7BCzljcs
-  const res = await fetch(`https://api.nasa.gov/techport/api/projects/${queryId}?api_key=${key}`);
+  const res = await fetch(`https://techport.nasa.gov/api/projects/${queryId}?api_key=${key}`);
   const data = await res.json();
   const project = data.project
   console.log(project.title)
