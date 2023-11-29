@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 
-const searchWords = ['fuel']
+const searchWords = ['rocket']
 let search = 'fuel'
 let isVideoOnly = false
 
