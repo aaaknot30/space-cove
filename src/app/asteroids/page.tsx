@@ -59,7 +59,9 @@ export default async function Asteroids() {
 
     }
     tmpObj.name = item['name'] 
-    tmpObj.ft = item['estimated_diameter']['feet']['estimated_diameter_max']
+    // console.log(" ================== " + item['name'] + " ---------------- ", item['estimated_diameter'])
+    tmpObj.ft = item['estimated_diameter'] ? item['estimated_diameter']['feet']['estimated_diameter_max'] : "0";
+    // tmpObj.ft = 0
     tmpObj.vlc = parseInt(item['close_approach_data'][0]['relative_velocity']['miles_per_hour'])
     tmpObj.mdist = parseInt(item['close_approach_data'][0]['miss_distance']['miles'])
     dataChart.push(tmpObj)
@@ -80,7 +82,8 @@ export default async function Asteroids() {
             <div className={styles.grid2}>
             <div>
                 {asteroids.map((item, index) => {
-                  const feet = parseInt(item['estimated_diameter']['feet']['estimated_diameter_max']).toFixed();
+                  const feet = item['estimated_diameter'] ? parseInt(item['estimated_diameter']['feet']['estimated_diameter_max']).toFixed() : "0";
+                  // const feet = parseInt("0").toFixed();
                   const feet_commas = feet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                   const velocity = parseInt(item['close_approach_data'][0]['relative_velocity']['miles_per_hour']).toFixed();
                   const velocity_commas = velocity.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
